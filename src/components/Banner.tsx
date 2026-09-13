@@ -1,4 +1,3 @@
-import React from 'react';
 import BannerImg from '../assets/banner-stack.png';
 
 const Banner = () => {
@@ -8,7 +7,7 @@ const Banner = () => {
             <div className="flex flex-col items-start space-y-6">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
             Build Your Ideal <br />
-            <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
               Development Stack
             </span>
           </h1>
@@ -19,10 +18,10 @@ const Banner = () => {
             next project.
           </p>
           <div className="flex flex-wrap items-center gap-4 pt-2">
-            <button className="px-6 py-3 rounded-xl text-white font-medium bg-gradient-to-r from-orange-500 to-pink-500 hover:opacity-90 transition-opacity shadow-sm">
+            <button className="px-6 py-3 rounded-xl text-white font-medium bg-linear-to-r from-orange-500 to-pink-500 hover:opacity-90 transition-opacity shadow-sm cursor-pointer">
               Explore Technologies
             </button>
-            <button className="px-6 py-3 rounded-xl font-medium text-gray-700 bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm">
+            <button className="px-6 py-3 rounded-xl font-medium text-gray-700 bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm cursor-pointer">
               Learn More
             </button>
           </div>
