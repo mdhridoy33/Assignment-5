@@ -1,7 +1,6 @@
 import React from 'react';
 import type { tech } from '../../type/techType';
 
-
 interface TechcardProps {
   technologies: tech[];
   onAddToStack?: (item: tech) => void;
@@ -9,23 +8,20 @@ interface TechcardProps {
 }
 
 const Techcard = ({ technologies, onAddToStack, selectedStack = [] }: TechcardProps) => {
-  console.log(technologies, "yt");
-
   return (
-  
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-     
+
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full">
       {technologies.map((techcard) => {
         const isAdded = selectedStack.some((item) => item.id === techcard.id);
 
         return (
           <div
             key={techcard.id}
-            className="card bg-base-100 border border-base-200 shadow-sm hover:shadow-md transition-all rounded-3xl"
+            className="card bg-base-100 border border-base-200 shadow-sm hover:shadow-md transition-all rounded-3xl w-full"
           >
             <div className="card-body p-6 justify-between">
               <div>
-                {/* Icon & Badge */}
+             
                 <div className="flex justify-between items-center mb-4">
                   <div className="avatar">
                     <div className="w-10 h-10">
@@ -37,7 +33,7 @@ const Techcard = ({ technologies, onAddToStack, selectedStack = [] }: TechcardPr
                   </span>
                 </div>
 
-             
+         
                 <h2 className="card-title text-xl font-bold text-base-content mb-1">
                   {techcard.name}
                 </h2>
@@ -45,6 +41,7 @@ const Techcard = ({ technologies, onAddToStack, selectedStack = [] }: TechcardPr
                   {techcard.description}
                 </p>
 
+        
                 <div className="flex items-center gap-2 mb-2 text-xs">
                   <span className="badge badge-ghost font-medium">
                     {techcard.category}
@@ -58,7 +55,7 @@ const Techcard = ({ technologies, onAddToStack, selectedStack = [] }: TechcardPr
                 </div>
               </div>
 
-           
+         
               <div className="card-actions mt-4">
                 <button
                   onClick={() => onAddToStack && onAddToStack(techcard)}
