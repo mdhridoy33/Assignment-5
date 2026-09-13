@@ -11,10 +11,10 @@ const technologiesFetch = async() : Promise<tech[]> =>{
   const technologies = await res.json();
   return technologies
 }
-
+const technologiesPromise = technologiesFetch();
 
 function App() {
-const technologiesPromise = technologiesFetch();
+
 
   return (
     <>
