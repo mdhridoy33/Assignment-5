@@ -1,10 +1,11 @@
-import Logo from './assets/logo-text.png';
+
+import Navbar from "./components/Navbar"
 
 function App() {
 
   return (
     <>
-      
+    <Navbar />
     </>
   )
 }
